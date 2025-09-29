@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journey Moments Gallery</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; background:#111; color:#fff; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; background:#1c1c1c; border-bottom:2px solid #333; }
+    h1 { margin:0; font-size:1.5rem; }
+    .back-btn { text-decoration:none; background:#27ae60; color:#fff; padding:8px 15px; border-radius:6px; transition:0.3s; }
+    .back-btn:hover { background:#1e8449; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:15px; padding:20px; max-width:1400px; margin:auto; }
+    .gallery-item { position:relative; overflow:hidden; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.6); }
+    .gallery-img { width:100%; height:200px; background-size:cover; background-position:center; transition:transform 0.5s ease; }
+    .gallery-item:hover .gallery-img { transform:scale(1.1); }
+    .image-title { position:absolute; bottom:0; left:0; right:0; padding:10px; background:rgba(0,0,0,0.6); text-align:center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌍 Journey Moments</h1>
+    <a href="index.html/portfolio" class="back-btn">⬅ Back</a>
+  </header>
+
+  <div class="gallery">
+    <div class="gallery-item"><div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');"></div><div class="image-title">Beach Sunset</div></div>
+    <div class="gallery-item"><div class="gallery-img" style="background-image:url('https://media.istockphoto.com/id/1443409611/photo/man-on-stone-on-the-hill-and-beautiful-mountains-in-haze-at-colorful-sunset-in-autumn.jpg?s=612x612&w=0&k=20&c=dcyDpPqlhCWMZYgqgHSrJZdoaH_ARrlgkpUcARp1_GU=');"></div><div class="image-title">Mountain Hike</div></div>
+    <div class="gallery-item"><div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');"></div><div class="image-title">Desert Path</div></div>
+    <div class="gallery-item"><div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1482192596544-9eb780fc7f66');"></div><div class="image-title">Forest Trail</div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.vecteezy.com/system/resources/previews/053/856/826/large_2x/studio-with-two-lights-and-a-lot-of-smoke-scene-is-dark-and-mysterious-free-photo.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-80 z-50 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link text-white hover:text-amber-400">Home</a>
+                    <a href="#portfolio" class="nav-link text-white hover:text-amber-400">Portfolio</a>
+                    <a href="#about" class="nav-link text-white hover:text-amber-400">About</a>
+                    <a href="#contact" class="nav-link text-white hover:text-amber-400">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Lumière <span class="text-blue-400"> Photography</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Through the lens of passion and creativity</p>
+            <a href="#portfolio" class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full font-medium transition duration-300 inline-block">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured <span class="text-blue-500">Works</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A collection of my finest photography moments</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <a href="Mountain.html" class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://plus.unsplash.com/premium_photo-1661963449031-c1ff2c8d2d99?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bW91bnRhaW4lMjBzdW5yaXNlfGVufDB8fDB8fHww" alt="Nature Photography" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Mountain Sunrise</h3>
+                        <p class="text-gray-600">Nature Photography</p>
+                    </div>
+                </a>
+                
+                <!-- Portfolio Item 2 -->
+                <a href="Urban.html" class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1507752533523-5186b0bc4c43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNpdHlzY2FwZXxlbnwwfHwwfHx8MA%3D%3D" alt="Urban Photography" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Urban Lights</h3>
+                        <p class="text-gray-600">Cityscape Photography</p>
+                    </div>
+                </a>
+                
+                <!-- Portfolio Item 3 -->
+                <a href="Essence.html" class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/large-chrome-heart-at-dubai-mall-and-dubai-fountain-free-image.jpg?w=600&quality=80" alt="Wedding Photography" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Portrait</h3>
+                        <p class="text-gray-600">Portrait Photography</p>
+                    </div>
+                </a>
+                
+                <!-- Portfolio Item 4 -->
+                <a href="Moments.html" class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D" alt="Travel Photography" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Journey Moments</h3>
+                        <p class="text-gray-600">Travel Photography</p>
+                    </div>
+                </a>
+                
+                <!-- Portfolio Item 5 -->
+                <a href="Art.html"  class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZvb2QlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D" alt="Food Photography" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Culinary Art</h3>
+                        <p class="text-gray-600">Food Photography</p>
+                    </div>
+                </a>
+                
+                <!-- Portfolio Item 6 -->
+                <a href="Vision.html"  class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://cdn.pixabay.com/photo/2022/09/15/09/59/water-7456116_640.jpg" alt="Abstract Photography" class="w-full h-64 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-semibold mb-2">Abstract</h3>
+                        <p class="text-gray-600">Abstract Photography</p>
+                    </div>
+                </a>	
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#" class="inline-block border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-8 py-3 rounded-full font-medium transition duration-300">View All Works</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-blue-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1486149370945-b0e59dc9485b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjZ8fHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Photographer" class="rounded-lg shadow-xl w-full max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About <span class="text-blue-500">Me</span></h2>
+                    <p class="text-gray-700 mb-6">I'm a passionate photographer with over 10 years of experience capturing life's most precious moments. My journey began with a simple point-and-shoot camera and has evolved into a lifelong pursuit of visual storytelling.</p>
+                    <p class="text-gray-700 mb-8">Specializing in landscape, portrait, and event photography, I strive to create images that evoke emotion and tell compelling stories. Every photograph I take is a reflection of my artistic vision and technical expertise.</p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Portrait</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Landscape</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Wedding</span>
+                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Commercial</span>
+                    </div>
+                    <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full font-medium transition duration-300 inline-block">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client <span class="text-blue-500">Testimonials</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">What people say about my work</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/8" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">Wedding Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Absolutely stunning wedding photos! Captured every special moment perfectly. We'll cherish these forever."</p>
+                    <div class="flex mt-4 text-blue-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/9" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">Corporate Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Professional, creative, and delivered beyond expectations. Our company portraits have never looked better."</p>
+                    <div class="flex mt-4 text-blue-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/10" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Emma Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Family Portrait Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Made our family feel so comfortable during the shoot. The photos are natural, beautiful, and exactly what we wanted."</p>
+                    <div class="flex mt-4 text-blue-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="text-blue-400">Touch</span></h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">Let's create something beautiful together</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8" data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i data-feather="mail" class="w-6 h-6 mr-4 text-blue-400"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-400">adityajoshi23@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="phone" class="w-6 h-6 mr-4 text-blue-400"></i>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-gray-400">+91 9699968944</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="map-pin" class="w-6 h-6 mr-4 text-blue-400"></i>
+                            <div>
+                                <h4 class="font-medium">Studio</h4>
+                                <p class="text-gray-400">SAKEC Studio, Chembur, Mumbai</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mt-12 mb-6">Follow Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                            <i data-feather="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                            <i data-feather="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full font-medium transition duration-300 w-full md:w-auto">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-white text-2xl font-bold mb-2">
+                        Lumière<span class="text-blue-400">Photography</span>
+                    </div>
+                    <p class="text-sm">Capturing moments, creating memories.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-amber-400 transition duration-300">Home</a>
+                    <a href="#portfolio" class="hover:text-amber-400 transition duration-300">Portfolio</a>
+                    <a href="#about" class="hover:text-amber-400 transition duration-300">About</a>
+                    <a href="#contact" class="hover:text-amber-400 transition duration-300">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2025 Lumière Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.querySelector('[data-feather="menu"]').addEventListener('click', function() {
+            // Implement mobile menu toggle functionality here
+            console.log('Mobile menu clicked');
+        });
+    </script>
+</body>
+</html>
